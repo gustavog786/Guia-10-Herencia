@@ -93,7 +93,7 @@ public class Televisor extends Electrodomestico{
     */
     
     @Override
-    public void precioFinal(){
+    public int precioFinal(){
         super.precioFinal();
         if (resolucion > 40) {
             precio = (int) ( precio + precio*0.3);
@@ -101,6 +101,7 @@ public class Televisor extends Electrodomestico{
         if (sintonizadorTDT) {
             precio = precio + 500;
         }
-        System.out.println("El precio final es: "+ precio);
+        System.out.println("El precio final del televisor es: "+ precio);
+        return precio;
     }
 }

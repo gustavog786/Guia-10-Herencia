@@ -128,7 +128,7 @@ public class Electrodomestico {
     Entre 50 y 79 kg $800
     Mayor que 80 kg $1000
     */
-    public void precioFinal(){
+    public int precioFinal(){
         switch(letra){
             case 'A':
                 precio = precio +1000;
@@ -163,7 +163,8 @@ public class Electrodomestico {
         if(peso>80)        {
             precio=precio+1000;
         }
-        System.out.println("El precio final es: "+ precio);
+        //System.out.println("El precio final es: "+ precio);
+        return precio;
     }
     
     //Metodo precio final en pocas linas

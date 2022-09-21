@@ -80,9 +80,10 @@ public class Lavadora extends Electrodomestico{
     visto en la clase Electrodoméstico también deben afectar al precio.
     */
     @Override
-    public void precioFinal(){
+    public int precioFinal(){
         super.precioFinal();
         precio = precio + (carga > 30 ? 500 : 0);
         System.out.println("El precio final de la lavadora es "+ precio);
+        return precio;
     }
 }
