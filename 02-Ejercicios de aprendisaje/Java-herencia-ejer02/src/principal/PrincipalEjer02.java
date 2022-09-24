@@ -85,6 +85,9 @@ public class PrincipalEjer02 {
 //        elec.crearElectrodomestico();
 //        System.out.println(elec.toString());
 //        elec.precioFinal();
+        Electrodomestico lava2 = new Lavadora(12, 1200, "negro", 'C', 70);
+        System.out.println(lava2);
+        lava2.precioFinal();
 //        Lavadora lava = new Lavadora();
 //        lava.crearLavadora();
 //        System.out.println(lava);
@@ -122,9 +125,6 @@ public class PrincipalEjer02 {
         for (Electrodomestico electrodomestico : electrodomesticos) {
             suma = suma + electrodomestico.precioFinal();
         }
-        System.out.println("El precio de todos los electromesticos es: "+ suma);
-        
-        
-        
+        System.out.println("El precio de todos los electromesticos es: "+ suma);    
     }
 }

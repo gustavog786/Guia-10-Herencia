@@ -99,8 +99,7 @@ public class Electrodomestico {
     
     public void crearElectrodomestico(){
         Scanner scan = new Scanner(System.in).useDelimiter("\n");
-        System.out.println("Ingrese el precio: ");
-        setPrecio(scan.nextInt());
+        setPrecio(1000);
         System.out.println("Ingrese el color: ");
         setColor(scan.next());
         comprobarColor(getColor());
