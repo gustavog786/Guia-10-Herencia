@@ -51,5 +51,10 @@ public class BarcoAMotor extends Barco{
         return super.toString()+ "BarcoAMotor{" + "potencia=" + potencia + '}';
     }
     
-    
+    @Override
+    public double modulo(){
+        double moduloNormal = eslora*10;
+        double moduloTotal = moduloNormal + potencia;
+        return moduloTotal;
+    }
 }

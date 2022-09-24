@@ -52,4 +52,10 @@ public class Velero extends Barco{
         return super.toString()+ "Velero{" + "numeroMastiles=" + numeroMastiles + '}';
     }
     
+    @Override
+    public double modulo(){
+        double moduloNormal = eslora*10;
+        double moduloTotal = moduloNormal + numeroMastiles;
+        return moduloTotal;
+    }
 }

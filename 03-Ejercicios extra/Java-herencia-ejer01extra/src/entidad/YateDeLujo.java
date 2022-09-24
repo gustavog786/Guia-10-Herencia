@@ -60,5 +60,11 @@ public class YateDeLujo extends Barco{
     public String toString() {
         return super.toString()+ "YateDeLujo{" + "potencia=" + potencia + ", camarotes=" + camarotes + '}';
     }
-    
+    //Metodo para calcular el modulo
+    @Override
+    public double modulo(){
+        double moduloNormal = eslora*10;
+        double moduloTotal = moduloNormal + potencia + camarotes;
+        return moduloTotal;
+    }
 }

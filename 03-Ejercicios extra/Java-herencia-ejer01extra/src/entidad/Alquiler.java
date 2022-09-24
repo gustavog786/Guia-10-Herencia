@@ -21,6 +21,7 @@ precio final de su alquiler.
 package entidad;
 
 import java.util.Date;
+import java.util.Scanner;
 
 
 public class Alquiler {
@@ -101,5 +102,40 @@ public class Alquiler {
     public String toString() {
         return "Alquiler{" + "nombre=" + nombre + ", dni=" + dni + ", fechaAlquiler=" + fechaAlquiler + ", fechaDevolucion=" + fechaDevolucion + ", posicionAmarre=" + posicionAmarre + ", barco=" + barco + '}';
     }
+    
+    //Metodo
+    /*
+    Un alquiler se calcula multiplicando el número de días de ocupación (calculado con la fecha de
+    alquiler y devolución), por un valor módulo de cada barco (obtenido simplemente
+    multiplicando por 10 los metros de eslora).
+    */
+    public void calcularAlquiler(){
+        Scanner scan = new Scanner(System.in).useDelimiter("\n");
+        int dia1, mes1, anio1;
+        System.out.println("Fecha de inicio de alquiler:");
+        System.out.print("Día: ");
+        dia1 = scan.nextInt();        
+        System.out.print("Mes: ");
+        mes1 = scan.nextInt();        
+        System.out.print("Año: ");
+        anio1 = scan.nextInt() - 1900; 
+        fechaAlquiler = new Date(anio1, mes1 - 1, dia1);               
+        int dia2, mes2, anio2;
+        System.out.println("Fecha devolución:");
+        System.out.print("Día: ");
+        dia2 = scan.nextInt();        
+        System.out.print("Mes: ");
+        mes2 = scan.nextInt();        
+        System.out.print("Año: ");
+        anio2 = scan.nextInt() - 1900;
+        fechaDevolucion = new Date(anio2, mes2 - 1, dia2);        
+        System.out.println("La fecha actual es: "+ fechaAlquiler.toString());
+        System.out.println("La fecha elegida es: " + fechaDevolucion.toString());
+        int diferencia = (int) ((fechaDevolucion.getTime() - fechaAlquiler.getTime())/1000/60/60/24);
+        System.out.println("Dias entre la fecha alquiler y la fecha de devolucion: " + diferencia);        
+        double valorAlquiler = diferencia * (barco.getEslora()* 10);        
+        System.out.println("El valor del alquiler es $"+ valorAlquiler);
+    }
+    
     
 }

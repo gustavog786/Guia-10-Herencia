@@ -71,5 +71,15 @@ public class Barco {
         return "Barco{" + "matricula=" + matricula + ", eslora=" + eslora + ", anioFabricacion=" + anioFabricacion + '}';
     }
     
+    /*modulo
+    En los barcos de tipo especial el módulo de cada barco se calcula sacando el módulo normal y
+    sumándole el atributo particular de cada barco. En los veleros se suma el número de mástiles,
+    en los barcos a motor se le suma la potencia en CV y en los yates se suma la potencia en CV y
+    el número de camarotes.
+    */
+    public double modulo(){
+        double moduloNormal = eslora*10;
+        return moduloNormal; 
+    }
     
 }

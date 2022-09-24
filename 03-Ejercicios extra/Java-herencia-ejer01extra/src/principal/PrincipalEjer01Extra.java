@@ -20,11 +20,18 @@ precio final de su alquiler.
  */
 package principal;
 
+import entidad.Alquiler;
+import java.util.Date;
+import java.util.Scanner;
+import menu.Menu;
+
 public class PrincipalEjer01Extra {
 
    
     public static void main(String[] args) {
         // TODO code application logic here
+        Menu m1 = new Menu();
+        m1.crearMenu();
     }
     
 }
