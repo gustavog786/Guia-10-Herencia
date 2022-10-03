@@ -85,9 +85,9 @@ public class PrincipalEjer02 {
 //        elec.crearElectrodomestico();
 //        System.out.println(elec.toString());
 //        elec.precioFinal();
-        Electrodomestico lava2 = new Lavadora(12, 1200, "negro", 'C', 70);
-        System.out.println(lava2);
-        lava2.precioFinal();
+//        Electrodomestico lava2 = new Lavadora(12, 1200, "negro", 'C', 70);
+//        System.out.println(lava2);
+//        lava2.precioFinal();
 //        Lavadora lava = new Lavadora();
 //        lava.crearLavadora();
 //        System.out.println(lava);
@@ -96,7 +96,14 @@ public class PrincipalEjer02 {
 //        tele.crearTelevisor();
 //        System.out.println(tele);
 //        tele.precioFinal();
+        Lavadora l1 = new Lavadora();
+        l1= l1.crearLavadora();
+        Televisor t1 = new Televisor();
+        t1= t1.crearTelevisor();
         
+         ArrayList <Electrodomestico> elec = new ArrayList<>();
+         elec.add(t1);
+         elec.add(l1);
         
     //Ejer03
     /*
@@ -110,19 +117,19 @@ public class PrincipalEjer02 {
     electrodomésticos, 2000 para lavadora y 5000 para televisor.
     */
     
-        ArrayList<Electrodomestico> electrodomesticos = new ArrayList<>();
-        electrodomesticos.add(new Lavadora(12,2000, "rojo", 'B', 150));
-        electrodomesticos.add(new Lavadora(20, 2000, "negro", 'C', 70));
-        electrodomesticos.add(new Televisor(45,true,2000, "rojo", 'B', 50));
-        electrodomesticos.add(new Televisor(39, false,2000, "rojo", 'B', 120));
-        
+//        ArrayList<Electrodomestico> electrodomesticos = new ArrayList<>();
+//        electrodomesticos.add(new Lavadora(12,2000, "rojo", 'B', 150));
+//        electrodomesticos.add(new Lavadora(20, 2000, "negro", 'C', 70));
+//        electrodomesticos.add(new Televisor(45,true,2000, "rojo", 'B', 50));
+//        electrodomesticos.add(new Televisor(39, false,2000, "rojo", 'B', 120));
+//        
         //Muestro el arraylist por pantalla
-        for (Electrodomestico electrodomestico : electrodomesticos) {
+        for (Electrodomestico electrodomestico : elec) {
             System.out.println(electrodomestico);
         }
         int suma=0;
         //Ejecuto el metodo precioFinal en el arraylist
-        for (Electrodomestico electrodomestico : electrodomesticos) {
+        for (Electrodomestico electrodomestico : elec) {
             suma = suma + electrodomestico.precioFinal();
         }
         System.out.println("El precio de todos los electromesticos es: "+ suma);    

@@ -73,15 +73,17 @@ public class Televisor extends Electrodomestico{
     padre, lo utilizamos para llenar los atributos heredados del padre y después llenamos
     los atributos del televisor.
     */
-    public void crearTelevisor(){
+    public Televisor crearTelevisor( ){
         Scanner scan = new Scanner(System.in).useDelimiter("\n");
+        Televisor t1 = new Televisor();
         System.out.println("Vamos a crear un televisor: ");
-        crearElectrodomestico();
+        crearElectrodomestico(t1);
         System.out.println("Ingrese la resolucion: ");
-        setResolucion(scan.nextDouble());
+        t1.setResolucion(scan.nextDouble());
         System.out.println("Posee sintonizador TDT ? si/no");
         String posee = scan.next();
-        sintonizadorTDT =(posee.equals("si"));
+        t1.setSintonizadorTDT(posee.equals("si"));
+        return t1;
     }
     
     /*

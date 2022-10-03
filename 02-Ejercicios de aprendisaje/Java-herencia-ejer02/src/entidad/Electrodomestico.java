@@ -73,7 +73,7 @@ public class Electrodomestico {
                 || letra == 'D' || letra =='E' ||letra == 'F') {
             return;
         } 
-        setLetra('F');
+        this.setLetra('F');
     }
     
     /*
@@ -83,12 +83,11 @@ public class Electrodomestico {
     minúsculas. Este método se invocará al crear el objeto y no será visible.
     */
     
-    public void comprobarColor(String color){
+    public String comprobarColor(String color){
         if (color.toLowerCase().equals("blanco") || color.toLowerCase().equals("negro") || color.toLowerCase().equals("rojo") ||
                 color.toLowerCase().equals("azul") || color.toLowerCase().equals("gris")) {
-                return;
         }
-        setColor("blanco");
+        return "blanco";
     }
     
     /*
@@ -97,17 +96,19 @@ public class Electrodomestico {
     precio se le da un valor base de $1000.
     */
     
-    public void crearElectrodomestico(){
+    public Electrodomestico crearElectrodomestico(Electrodomestico e1){
         Scanner scan = new Scanner(System.in).useDelimiter("\n");
-        setPrecio(1000);
+        e1.setPrecio(1000);
         System.out.println("Ingrese el color: ");
-        setColor(scan.next());
-        comprobarColor(getColor());
+        e1.setColor(scan.next());
+        comprobarColor(e1.getColor());
         System.out.println("Ingrese el consumo: ");
-        setLetra(scan.next().charAt(0));
-        comprobarConsumoEnergetico(getLetra());
+        e1.setLetra(scan.next().charAt(0));
+        comprobarConsumoEnergetico(e1.getLetra());
         System.out.println("Ingrese el peso: ");
-        setPeso(scan.nextInt());
+        e1.setPeso(scan.nextInt());
+        return e1;
+        
     }
     
     /*

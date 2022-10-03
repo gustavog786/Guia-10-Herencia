@@ -62,14 +62,14 @@ public class Lavadora extends Electrodomestico{
     padre, lo utilizamos para llenar los atributos heredados del padre y después llenamos
     el atributo propio de la lavadora.
     */
-    public void crearLavadora(){
-        
+    public Lavadora crearLavadora(){
         Scanner scan = new Scanner(System.in).useDelimiter("\n");
+        Lavadora l1 = new Lavadora();
         System.out.println("Vamos a crear una lavadora: ");
-        crearElectrodomestico();
+        crearElectrodomestico(l1);
         System.out.println("Ingrese la carga: ");
-        setCarga(scan.nextInt());
-        
+        l1.setCarga(scan.nextInt());
+        return l1;
     }
     
     /*
